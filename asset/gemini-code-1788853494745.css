@@ -1,0 +1,173 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0f172a;
+    color: #f8fafc;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header & Navigasi */
+header {
+    background-color: #1e293b;
+    padding: 1.2rem 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e11d48;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #ffffff;
+    background-color: #e11d48;
+}
+
+/* Kontainer Utama */
+.main-container {
+    flex: 1;
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+/* Halaman Beranda / Profil Card */
+.profile-card {
+    background-color: #1e293b;
+    padding: 40px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.profile-img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 4px solid #e11d48;
+    flex: 0 0 auto;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.bio h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.bio .subtitle {
+    color: #e11d48;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.bio p {
+    color: #94a3b8;
+    font-size: 1rem;
+}
+
+/* Grid & Card Halaman Lain */
+.page-title {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 25px;
+    border-left: 5px solid #e11d48;
+    padding-left: 15px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #1e293b;
+    padding: 25px;
+    border-radius: 12px;
+    border-top: 4px solid #e11d48;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.card p, .card ul {
+    color: #94a3b8;
+    font-size: 0.95rem;
+}
+
+.card ul {
+    padding-left: 20px;
+}
+
+.card ul li {
+    margin-bottom: 8px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e293b;
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+/* Responsif Layar HP */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+    }
+}
